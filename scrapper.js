@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 
 async function scrapeDeals() {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: true }); // Runs without opening a browser window
     const page = await browser.newPage();
     
     await page.goto('https://www.aliexpress.com/ssr/300000556/zQFHEaEPNJ?spm=a2g0o.home.tab.2.650c76dbyAQQ6K&disableNav=YES&pha_manifest=ssr&_immersiveMode=true', {
@@ -19,7 +19,7 @@ async function scrapeDeals() {
             const name = nameElement ? nameElement.innerText.trim() : null;
             const price = priceElement ? priceElement.innerText.trim() : null;
 
-            if (name) { // Only add if name exists
+            if (name) {
                 productsArray.push({ name, price });
             }
         });
