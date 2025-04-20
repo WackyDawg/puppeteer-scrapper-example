@@ -1,0 +1,18 @@
+{
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "description": "A simple app to scrape a website using Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "wackydawg",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^24.6.1"
+  }
+}
